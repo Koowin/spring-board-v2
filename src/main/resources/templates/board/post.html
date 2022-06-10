@@ -1,0 +1,26 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/common :: head('게시글 조회')">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" th:replace="fragments/common :: menu('board')"></nav>
+<div class="container">
+    <dl class="row">
+        <dt class="col-sm-3">Post ID</dt>
+        <dd class="col-sm-9"><a th:text="${post.id}">포스트 아이디</a></dd>
+
+        <dt class="col-sm-3">제목</dt>
+        <dd class="col-sm-9"><a th:text="${post.title}">포스트 제목</a></dd>
+
+        <dt class="col-sm-3">작성자</dt>
+        <dd class="col-sm-9"><a th:text="${post.author}">포스트 작성자</a></dd>
+    </dl>
+
+    <div class="row">
+        <a th:text="${post.content}">포스트 내용</a>
+    </div>
+
+</div>
+</body>
+</html>
